@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Montserrat:wght@700;900&display=swap');
-@import './globalVariables.scss';
 
 html,
 body,
@@ -41,16 +40,13 @@ a {
   box-sizing: border-box;
 }
 
-// @media (prefers-color-scheme: dark) {
-//   html {
-//     color-scheme: dark;
-//   }
-//   body {
-//     color: white;
-//     background: black;
-//   }
-// }
+:root {
+  /* Your default theme */
+  --primary-color: #fbda69;
+  --secondary-color: #fff;
+}
 
-.primary-bg {
-  background-color: $primary-color;
+[data-theme='dark'] {
+  --primary-color: #1f2596;
+  --secondary-color: #000;
 }
