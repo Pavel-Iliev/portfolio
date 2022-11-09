@@ -17,30 +17,24 @@ export default function ThemeSwitch() {
     return null;
   }
 
-  function handleCheckInput() {
+  function handleSwitch(e: React.MouseEvent<HTMLElement>) {
+    e.preventDefault();
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
     setCheckInput((prev) => !prev);
   }
 
   return (
-    <div className={styles.theme_switch}>
+    <div className={styles.theme_switch} onClick={handleSwitch}>
       <input value={theme} type="checkbox" className={styles.theme_switch__checkbox} id="checkbox" />
       <label className={styles.theme_switch__label} htmlFor="checkbox">
-        <span
-          className={styles.theme_switch__label__icon}
-          onClick={(e) => {
-            setTheme('light');
-            handleCheckInput();
-          }}
-        >
+        <span className={styles.theme_switch__label__icon}>
           <FaSun />
         </span>
-        <span
-          className={styles.theme_switch__label__icon}
-          onClick={(e) => {
-            setTheme('dark');
-            handleCheckInput();
-          }}
-        >
+        <span className={styles.theme_switch__label__icon}>
           <FaMoon />
         </span>
         <span
