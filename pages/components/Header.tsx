@@ -1,24 +1,19 @@
 import React from 'react';
-import ThemeSwitch from '../hooks/ThemeSwitch';
 import styles from '../../styles/Header.module.scss';
 import Typewriter from 'typewriter-effect';
-import UseMediaQuery from '../hooks/UseMediaQuery';
 import { HI_WORDS } from '../../utils/constants';
+import NavBar from './NavBar';
 
 type Classes = {
   classes: string;
 };
 
 export default function Header({ classes }: Classes) {
-  // const isMobile = UseMediaQuery(600);
-  // const hamburgerMenu = isMobile && 'sticazzi';
   return (
     <>
       <section className={styles[classes]}>
         <div className={styles.container}>
-          <h1>Header</h1>
-          <p>Text paragraph</p>
-          <ThemeSwitch />
+          <NavBar />
           <h2>
             <Typewriter
               options={{
