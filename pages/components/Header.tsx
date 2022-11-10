@@ -3,12 +3,11 @@ import ThemeSwitch from '../hooks/ThemeSwitch';
 import styles from '../../styles/Header.module.scss';
 import Typewriter from 'typewriter-effect';
 import UseMediaQuery from '../hooks/UseMediaQuery';
+import { HI_WORDS } from '../../utils/constants';
 
 type Classes = {
   classes: string;
 };
-
-const hiWords: string[] = ['Hi,', 'Ciao,', 'Здравеи,', 'Hallo,', 'Hola,', 'Bonjour', 'こんにちは,'];
 
 export default function Header({ classes }: Classes) {
   // const isMobile = UseMediaQuery(600);
@@ -23,7 +22,7 @@ export default function Header({ classes }: Classes) {
           <h2>
             <Typewriter
               options={{
-                strings: hiWords,
+                strings: HI_WORDS,
                 delay: 200,
                 autoStart: true,
                 loop: true,
