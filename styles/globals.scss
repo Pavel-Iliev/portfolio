@@ -40,13 +40,20 @@ a {
   box-sizing: border-box;
 }
 
+.primary-bg {
+  background-color: var(--primary-color);
+}
+
+// SWITCH THEME COLORS
 :root {
   /* Your default theme */
   --primary-color: #fbda69;
   --secondary-color: #fff;
+  --action-color: #8773f0;
 }
 
 [data-theme='dark'] {
   --primary-color: #1f2596;
   --secondary-color: #000;
+  --action-color: #yellow;
 }

@@ -1,5 +1,5 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 
-export default function About() {
+export default function About(): ReactElement {
   return <div>About</div>;
 }

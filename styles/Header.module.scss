@@ -1,9 +1,5 @@
 @import './globalVariables.scss';
 
-.primary-bg {
-  background-color: var(--primary-color);
-}
-
 .container {
   @include container;
 }

@@ -1,0 +1,36 @@
+@import './globalVariables.scss';
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  height: 60px;
+
+  &__container {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.menu__nav {
+  display: flex;
+  cursor: pointer;
+
+  &__link {
+    &_active {
+      color: var(--action-color);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    height: 80px;
+  }
+}
