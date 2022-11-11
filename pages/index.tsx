@@ -2,8 +2,6 @@ import { createRef, RefObject, useState } from 'react';
 import { InView } from 'react-intersection-observer';
 import styles from '../styles/Home.module.scss';
 import { MENU_SECTION } from '../utils/constants';
-import { SectionsEnums } from '../utils/enums';
-import Header from './components/Header';
 
 export default function Home() {
   const [activeMenuLinkId, setActiveMenuLinkId] = useState(0);
@@ -20,8 +18,6 @@ export default function Home() {
       behavior: 'smooth',
     });
   }
-
-  console.log(mapRefs);
 
   return (
     <div className="app">

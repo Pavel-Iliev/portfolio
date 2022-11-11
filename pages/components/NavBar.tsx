@@ -5,6 +5,7 @@ import styles from '../../styles/NavBar.module.scss';
 import { NavBarTypes } from '../../utils/types';
 import Logo from './Logo';
 import ThemeSwitch from '../hooks/ThemeSwitch';
+import { SectionsEnums } from '../../utils/enums';
 
 export default function NavBar(props: NavBarTypes) {
   const { activeMenuLinkId, setActiveMenuLinkId, onMenuLink } = props;
@@ -15,14 +16,15 @@ export default function NavBar(props: NavBarTypes) {
     <>
       <div className={styles.menu}>
         <div className={styles.menu__container}>
-          <span
+          <div
+            className={styles.menu__container__wrap_logo}
             onClick={() => {
               setActiveMenuLinkId(0);
-              onMenuLink('Header');
+              onMenuLink(SectionsEnums.Header);
             }}
           >
             <Logo />
-          </span>
+          </div>
           <ul className={styles.menu__nav}>
             {MENU_SECTION &&
               MENU_SECTION.map((section) => {

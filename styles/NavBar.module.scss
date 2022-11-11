@@ -15,16 +15,64 @@
     @include container;
     display: flex;
     justify-content: space-between;
+
+    &__wrap_logo {
+      display: flex;
+      align-items: center;
+    }
   }
 }
 
 .menu__nav {
   display: flex;
+  align-items: center;
   cursor: pointer;
 
   &__link {
+    line-height: 1em;
+
     &_active {
       color: var(--action-color);
+    }
+  }
+}
+
+@media screen and (max-width: 767.9px) {
+  .menu__nav {
+    position: absolute;
+    top: 80px;
+    left: 100%;
+    transform-origin: 100% 50%;
+    transform: translateX(-28px);
+    -webkit-transform: translateX(-28px);
+    -moz-transform: translateX(-28px);
+    -ms-transform: translateX(-28px);
+    -o-transform: translateX(-28px);
+    flex-direction: column;
+    align-items: flex-start;
+    &__link {
+      line-height: 1em;
+      letter-spacing: 10px;
+      font-size: 30px;
+      margin-bottom: 15px;
+      transition: all 0.25s ease;
+      -webkit-transition: all 0.25s ease;
+      -moz-transition: all 0.25s ease;
+      -ms-transition: all 0.25s ease;
+      -o-transition: all 0.25s ease;
+      &_active {
+        transition-delay: 0.2s;
+        font-size: 16px;
+        letter-spacing: 0px;
+        transform: translateX(-75%);
+        -webkit-transform: translateX(-75%);
+        -moz-transform: translateX(-75%);
+        -ms-transform: translateX(-75%);
+        -o-transform: translateX(-75%);
+      }
+    }
+    &__link:last-child {
+      margin-bottom: 0;
     }
   }
 }
