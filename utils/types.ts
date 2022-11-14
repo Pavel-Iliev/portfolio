@@ -17,6 +17,7 @@ export type Section = {
   label: string;
   component?: ReactElement;
   componentwithparams?: (value: Header) => ReactElement;
+  icon?: ReactNode;
 };
 
 export type Social = {

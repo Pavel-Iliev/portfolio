@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
-import { FaMoon, FaSun } from 'react-icons/fa';
+import { BsFillSunFill, BsFillMoonStarsFill } from 'react-icons/bs';
 import styles from '../../styles/ThemeSwitch.module.scss';
 
 export default function ThemeSwitch() {
@@ -27,13 +27,13 @@ export default function ThemeSwitch() {
 
   const lightTheme = (
     <span className={styles.theme_switch__label__icon}>
-      <FaSun />
+      <BsFillSunFill />
     </span>
   );
 
   const darkTheme = (
     <span className={styles.theme_switch__label__icon}>
-      <FaMoon />
+      <BsFillMoonStarsFill />
     </span>
   );
 

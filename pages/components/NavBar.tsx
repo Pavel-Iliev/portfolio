@@ -41,16 +41,9 @@ export default function NavBar(props: NavBarTypes) {
                         onMenuLink(section.label);
                       }}
                     >
+                      {section.icon && <span className={styles.menu__nav__link_active__icon}>{section.icon}</span>}
                       {section.label}
-                      <span
-                        className={`${
-                          activeMenuLinkId === section.id
-                            ? styles.menu__nav__link_active__selected
-                            : styles.menu__nav__link_active__disabled
-                        }`}
-                      >
-                        /
-                      </span>
+                      <span className={styles.menu__nav__link_active__selected}>/</span>
                     </li>
                   )
                 );

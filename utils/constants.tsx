@@ -7,8 +7,9 @@ import Works from '../pages/components/Works';
 import { SectionsEnums } from './enums';
 import { Section, Header as HeaderTypes, Social } from './types';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
+import { FaUserTie, FaCogs, FaBeer, FaAtlas, FaCode } from 'react-icons/fa';
 
-export const HI_WORDS: string[] = ['Hi,', 'Ciao,', 'Здравеи,', 'Hallo,', 'Hola,', 'Bonjour', 'こんにちは,'];
+export const HI_WORDS: string[] = ['Hi,', 'Ciao,', 'Здравеи,', 'Hallo,', '你好', 'Hola,', 'Bonjour,', 'こんにちは,'];
 
 export const MENU_SECTION: Section[] = [
   {
@@ -18,11 +19,11 @@ export const MENU_SECTION: Section[] = [
       <Header activeMenuLinkId={activeMenuLinkId} setActiveMenuLinkId={setActiveMenuLinkId} onMenuLink={onMenuLink} />
     ),
   },
-  { id: 1, label: SectionsEnums.About, component: <About /> },
-  { id: 2, label: SectionsEnums.Services, component: <Services /> },
-  { id: 3, label: SectionsEnums.Works, component: <Works /> },
-  { id: 4, label: SectionsEnums.Experience, component: <Experience /> },
-  { id: 5, label: SectionsEnums.Contact, component: <Contact /> },
+  { id: 1, label: SectionsEnums.About, component: <About />, icon: <FaUserTie /> },
+  { id: 2, label: SectionsEnums.Services, component: <Services />, icon: <FaCode /> },
+  { id: 3, label: SectionsEnums.Works, component: <Works />, icon: <FaAtlas /> },
+  { id: 4, label: SectionsEnums.Experience, component: <Experience />, icon: <FaCogs /> },
+  { id: 5, label: SectionsEnums.Contact, component: <Contact />, icon: <FaBeer /> },
 ];
 
 export const SOCIALS: Social[] = [
