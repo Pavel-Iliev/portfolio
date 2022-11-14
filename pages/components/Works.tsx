@@ -1,5 +1,5 @@
 import React from 'react';
 
 export default function Works() {
-  return <div>Works</div>;
+  return <h2>Works</h2>;
 }

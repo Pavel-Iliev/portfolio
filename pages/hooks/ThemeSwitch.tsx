@@ -6,7 +6,6 @@ import styles from '../../styles/ThemeSwitch.module.scss';
 
 export default function ThemeSwitch() {
   const [mounted, setMounted] = useState(false);
-  const [checkInput, setCheckInput] = useState(false);
   const { theme, setTheme } = useTheme();
 
   useEffect(() => {
@@ -24,24 +23,25 @@ export default function ThemeSwitch() {
     } else {
       setTheme('light');
     }
-    setCheckInput((prev) => !prev);
   }
+
+  const lightTheme = (
+    <span className={styles.theme_switch__label__icon}>
+      <FaSun />
+    </span>
+  );
+
+  const darkTheme = (
+    <span className={styles.theme_switch__label__icon}>
+      <FaMoon />
+    </span>
+  );
 
   return (
     <div className={styles.theme_switch} onClick={handleSwitch}>
       <input value={theme} type="checkbox" className={styles.theme_switch__checkbox} id="checkbox" />
       <label className={styles.theme_switch__label} htmlFor="checkbox">
-        <span className={styles.theme_switch__label__icon}>
-          <FaSun />
-        </span>
-        <span className={styles.theme_switch__label__icon}>
-          <FaMoon />
-        </span>
-        <span
-          className={`${styles.theme_switch__label__circle} ${
-            checkInput ? styles.theme_switch__label__circle__checked : ''
-          }`}
-        ></span>
+        {theme === 'light' ? darkTheme : lightTheme}
       </label>
     </div>
   );

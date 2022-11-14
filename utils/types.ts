@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import { ReactElement, ReactNode } from 'react';
 
 export type Header = {
   activeMenuLinkId: number;
@@ -17,4 +17,11 @@ export type Section = {
   label: string;
   component?: ReactElement;
   componentwithparams?: (value: Header) => ReactElement;
+};
+
+export type Social = {
+  id: number;
+  label: string;
+  link: string;
+  icon: ReactNode;
 };

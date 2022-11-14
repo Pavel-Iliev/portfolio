@@ -1,63 +1,26 @@
 .theme_switch {
   display: flex;
-  width: 56px;
+  justify-content: center;
+  width: 30px;
   height: 30px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
 
   &__checkbox {
     opacity: 0;
     position: absolute;
   }
   &__label {
-    width: 100%;
-    padding: 5px 8px;
-    position: relative;
-    background-color: var(--secondary-color);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 50px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    -ms-border-radius: 50px;
-    -o-border-radius: 50px;
+    justify-content: center;
     cursor: pointer;
     &__icon {
+      height: 100%;
       display: flex;
-
-      svg {
-        transform: scale(0.9);
-        -webkit-transform: scale(0.9);
-        -moz-transform: scale(0.9);
-        -ms-transform: scale(0.9);
-        -o-transform: scale(0.9);
-      }
-    }
-
-    &__circle {
-      position: absolute;
-      width: 24px;
-      height: 24px;
-      top: 50%;
-      left: 50%;
-      background-color: var(--primary-color);
-      transform: translate(-100%, -50%);
-      -webkit-transform: translate(-100%, -50%);
-      -moz-transform: translate(-100%, -50%);
-      -ms-transform: translate(-100%, -50%);
-      -o-transform: translate(-100%, -50%);
-      border-radius: 50%;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      -ms-border-radius: 50%;
-      -o-border-radius: 50%;
-
-      &__checked {
-        transform: translate(0, -50%);
-        -webkit-transform: translate(0, -50%);
-        -moz-transform: translate(0, -50%);
-        -ms-transform: translate(0, -50%);
-        -o-transform: translate(0, -50%);
-      }
+      align-items: center;
     }
   }
 }

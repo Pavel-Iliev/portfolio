@@ -21,10 +21,6 @@ export default function Home() {
 
   return (
     <div className="app">
-      {/* <section ref={mapRefs['Header']} className={`${styles.wrap__section} primary-bg`}>
-        <Header activeMenuLinkId={activeMenuLinkId} setActiveMenuLinkId={setActiveMenuLinkId} onMenuLink={onMenuLink} />
-      </section> */}
-
       {MENU_SECTION &&
         MENU_SECTION.map((section) => {
           return (

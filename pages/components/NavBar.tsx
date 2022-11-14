@@ -6,6 +6,7 @@ import { NavBarTypes } from '../../utils/types';
 import Logo from './Logo';
 import ThemeSwitch from '../hooks/ThemeSwitch';
 import { SectionsEnums } from '../../utils/enums';
+import Socials from './Socials';
 
 export default function NavBar(props: NavBarTypes) {
   const { activeMenuLinkId, setActiveMenuLinkId, onMenuLink } = props;
@@ -41,12 +42,24 @@ export default function NavBar(props: NavBarTypes) {
                       }}
                     >
                       {section.label}
+                      <span
+                        className={`${
+                          activeMenuLinkId === section.id
+                            ? styles.menu__nav__link_active__selected
+                            : styles.menu__nav__link_active__disabled
+                        }`}
+                      >
+                        /
+                      </span>
                     </li>
                   )
                 );
               })}
           </ul>
-          <ThemeSwitch />
+          <div className={styles.menu__container__socials_switch}>
+            <Socials />
+            <ThemeSwitch />
+          </div>
         </div>
       </div>
     </>
