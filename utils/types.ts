@@ -26,3 +26,9 @@ export type Social = {
   link: string;
   icon: ReactNode;
 };
+
+export type Skill = {
+  id: number;
+  label: string;
+  icon: ReactNode;
+};

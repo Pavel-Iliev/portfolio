@@ -5,11 +5,12 @@ import Header from '../pages/components/Header';
 import Services from '../pages/components/Services';
 import Works from '../pages/components/Works';
 import { SectionsEnums } from './enums';
-import { Section, Header as HeaderTypes, Social } from './types';
+import { Section, Header as HeaderTypes, Social, Skill } from './types';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { FaUserTie, FaCogs, FaBeer, FaAtlas, FaCode } from 'react-icons/fa';
+import { SiMongodb, SiReact, SiNodedotjs, SiTypescript, SiCss3 } from 'react-icons/si';
 
-export const HI_WORDS: string[] = ['Hi,', 'Ciao,', 'Здравеи,', 'Hallo,', '你好', 'Hola,', 'Bonjour,', 'こんにちは,'];
+export const HI_WORDS: string[] = ['Hi,', 'Ciao,', 'Здравеи,', 'Hallo,', '你好,', 'Hola,', 'Bonjour,', 'こんにちは,'];
 
 export const MENU_SECTION: Section[] = [
   {
@@ -29,4 +30,12 @@ export const MENU_SECTION: Section[] = [
 export const SOCIALS: Social[] = [
   { id: 1, label: 'Linkedin', icon: <AiFillLinkedin />, link: 'https://www.linkedin.com/in/pavel-iliev-2593b0102/' },
   { id: 2, label: 'Git Hub', icon: <AiFillGithub />, link: 'https://github.com/Pavel-Iliev' },
+];
+
+export const SKILLS: Skill[] = [
+  { id: 1, label: 'Mongodb', icon: <SiMongodb /> },
+  { id: 2, label: 'React', icon: <SiReact /> },
+  { id: 3, label: 'Nodejs', icon: <SiNodedotjs /> },
+  { id: 4, label: 'Typescript', icon: <SiTypescript /> },
+  { id: 5, label: 'Css', icon: <SiCss3 /> },
 ];

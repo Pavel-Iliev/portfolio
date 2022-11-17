@@ -23,7 +23,7 @@
     &__socials_switch {
       display: flex;
       justify-content: space-between;
-      width: 100px;
+      width: 130px;
 
       @media screen and (min-width: 992px) {
         width: 140px;
@@ -43,6 +43,10 @@
 
   &__link {
     line-height: 1em;
+
+    &:hover {
+      color: var(--action-color);
+    }
 
     &_active {
       color: var(--action-color);
@@ -98,6 +102,10 @@
       font-size: 14px;
       position: relative;
 
+      &_active__icon {
+        display: none;
+      }
+
       &:before,
       &:after {
         content: '';
@@ -120,7 +128,7 @@
 @media screen and (max-width: 767.9px) {
   .menu__nav {
     position: absolute;
-    top: 120px;
+    top: 105px;
     left: 100%;
     transform-origin: 100% 50%;
     transform: translateX(-40px);
@@ -133,7 +141,8 @@
     &__link {
       line-height: 1em;
       font-size: 14px;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
+      padding: 6px 0;
       display: flex;
       transition: all 0.25s ease 0.25s;
       -webkit-transition: all 0.25s ease 0.25s;

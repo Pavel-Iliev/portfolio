@@ -50,10 +50,14 @@ a {
   --primary-color: #fbda69;
   --secondary-color: #fff;
   --action-color: #8773f0;
+  --btn-border-color: #000;
+  --btn-color: #fff;
 }
 
 [data-theme='dark'] {
   --primary-color: #1f2596;
   --secondary-color: #000;
-  --action-color: #yellow;
+  --action-color: yellow;
+  --btn-border-color: #fff;
+  --btn-color: #000;
 }
