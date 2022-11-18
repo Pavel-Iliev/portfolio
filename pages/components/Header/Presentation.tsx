@@ -34,7 +34,11 @@ export default function Presentation() {
       </h3>
       <div className={styles.presentation__me}>
         <h1>
-          <>{presentationMeNewLine('[BR]', <br />)}</>
+          <>
+            {presentationMeNewLine('[BR]', <br />).map((el, i) =>
+              el && typeof el === 'string' ? <span key={i}>{el}</span> : el,
+            )}
+          </>
         </h1>
         <p>{labels.front_end_passion}</p>
       </div>

@@ -32,7 +32,7 @@ $primary-color: #fbda69;
   padding: 12px 30px;
   background-color: transparent;
   background-color: var(--primary-color);
-  color: #000;
+  color: var(--btn-color);
   transition: all 0.25s ease;
   -webkit-transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
@@ -53,17 +53,17 @@ $primary-color: #fbda69;
     -moz-transform: translate(3px, 3px);
     -ms-transform: translate(3px, 3px);
     -o-transform: translate(3px, 3px);
-    transition: all 0.25s ease;
-    -webkit-transition: all 0.25s ease;
-    -moz-transition: all 0.25s ease;
-    -ms-transition: all 0.25s ease;
-    -o-transition: all 0.25s ease;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    -webkit-transition: opacity 0.25s ease, transform 0.25s ease;
+    -moz-transition: opacity 0.25s ease, transform 0.25s ease;
+    -ms-transition: opacity 0.25s ease, transform 0.25s ease;
+    -o-transition: opacity 0.25s ease, transform 0.25s ease;
   }
 
   &:hover {
     background-color: var(--action-color);
     border: 2px solid var(--action-color);
-    color: #fff;
+    color: var(--btn-color);
     transform: translate(3px, 3px);
     -webkit-transform: translate(3px, 3px);
     -moz-transform: translate(3px, 3px);

@@ -39,3 +39,5 @@ export const SKILLS: Skill[] = [
   { id: 4, label: 'Typescript', icon: <SiTypescript /> },
   { id: 5, label: 'Css', icon: <SiCss3 /> },
 ];
+
+export const CHUCKTEXT: string = 'Ask joke to Chuck';

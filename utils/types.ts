@@ -32,3 +32,7 @@ export type Skill = {
   label: string;
   icon: ReactNode;
 };
+
+export type Chuck = {
+  scroll: number;
+};

@@ -1,10 +1,12 @@
-import { createRef, RefObject, useState } from 'react';
+import { createRef, RefObject, useEffect, useState } from 'react';
 import { InView } from 'react-intersection-observer';
 import styles from '../styles/Home.module.scss';
 import { MENU_SECTION } from '../utils/constants';
+import Chuck from './components/Chuck';
 
 export default function Home() {
   const [activeMenuLinkId, setActiveMenuLinkId] = useState(0);
+  const [scroll, setScroll] = useState(0);
 
   type MapRefs = {
     [id: string]: RefObject<HTMLElement>;
@@ -18,6 +20,18 @@ export default function Home() {
       behavior: 'smooth',
     });
   }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScroll((prev) => window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <div className="app">
@@ -43,6 +57,7 @@ export default function Home() {
             </InView>
           );
         })}
+      <Chuck scroll={scroll} />
     </div>
   );
 }
