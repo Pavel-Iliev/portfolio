@@ -93,3 +93,9 @@ $primary-color: #fbda69;
   -o-object-fit: cover;
   object-fit: cover;
 }
+
+@mixin section-title {
+  position: absolute;
+  opacity: 0.075;
+  font-size: 18vw;
+}

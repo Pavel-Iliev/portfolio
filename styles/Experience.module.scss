@@ -1,0 +1,9 @@
+@import './globalVariables.scss';
+
+.container {
+  @include container;
+
+  &__title {
+    @include section-title;
+  }
+}

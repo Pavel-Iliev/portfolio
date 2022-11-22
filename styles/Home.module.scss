@@ -2,4 +2,9 @@
 
 .wrap__section {
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0;
 }

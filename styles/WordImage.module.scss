@@ -1,0 +1,12 @@
+.wrap_word {
+  position: relative;
+  display: inline-block;
+
+  &__image {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+  }
+}

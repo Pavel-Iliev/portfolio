@@ -1,3 +1,4 @@
+import { type } from 'os';
 import { ReactElement, ReactNode } from 'react';
 
 export type Header = {
@@ -35,4 +36,9 @@ export type Skill = {
 
 export type Chuck = {
   scroll: number;
+};
+
+export type Mask = {
+  white: boolean;
+  children: JSX.Element;
 };
