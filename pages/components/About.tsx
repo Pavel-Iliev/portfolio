@@ -13,8 +13,10 @@ export default function About(): ReactElement {
       <div className={styles.container__content}>
         <div className={styles.container__content__text}>
           <p>
-            I’m a Developer located in Bergamo, {<WordImage word={'Italy'} image={hand} alt={'italy hand'} />}. With
-            passion for all the Fron-End aspects, animations, UI effects, dynamic user experiences and more...
+            I’m a Developer located in&nbsp;Bergamo, {<WordImage word={'Italy'} image={hand} alt={'italy hand'} />}.
+          </p>
+          <p>
+            With passion for all the Fron-End aspects, animations, UI effects, dynamic user experiences and&nbsp;more...
           </p>
         </div>
         <div className={styles.container__content__image}>

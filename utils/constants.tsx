@@ -41,3 +41,14 @@ export const SKILLS: Skill[] = [
 ];
 
 export const CHUCKTEXT: string = 'Ask joke to Chuck';
+
+export type WordImageType = {
+  image: any;
+  alt: string;
+  word: string;
+};
+
+export type MousePosition = {
+  x: number;
+  y: number;
+};

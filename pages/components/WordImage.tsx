@@ -1,38 +1,29 @@
 import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
+import React, { useState, MouseEvent } from 'react';
 import styles from '../../styles/WordImage.module.scss';
+import { MousePosition, WordImageType } from '../../utils/constants';
 
-export default function WordImage(props) {
+export default function WordImage(props: WordImageType) {
   const { image, alt, word } = props;
 
-  const [globalMousePos, setGlobalMousePos] = useState({});
-  const [localMousePos, setLocalMousePos] = useState({});
-  const handleMouseMove = (event) => {
-    console.log(event.clientY);
+  const [localMousePos, setLocalMousePos] = useState<MousePosition>({ x: 0, y: 0 });
 
-    // 👇 Get mouse position relative to element
-    const localX = event.clientX - event.target.offsetLeft;
-    const localY = event.clientY - event.target.offsetTop;
+  const handleMouseMove = (event: MouseEvent) => {
+    const node = event.target as HTMLElement;
+    const localX = event.clientX - node.getBoundingClientRect().left;
+    const localY = event.clientY - node.getBoundingClientRect().top;
+
     setLocalMousePos({ x: localX, y: localY });
   };
-  useEffect(() => {
-    const handleMouseMove = (event) => {
-      setGlobalMousePos({
-        x: event.clientX,
-        y: event.clientY,
-      });
-    };
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
 
   return (
     <span onMouseMove={handleMouseMove} className={styles.wrap_word}>
       {word}
-      <span className={styles.wrap_word__image}>
-        ({localMousePos.x}, {localMousePos.y}){/* <Image src={image} alt={alt} /> */}
+      <span
+        style={{ transform: `translate(-${50 + localMousePos.x}%, -${50 + localMousePos.y / 2}%)` }}
+        className={styles.wrap_word__image}
+      >
+        <Image src={image} alt={alt} />
       </span>
     </span>
   );
