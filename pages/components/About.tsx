@@ -4,6 +4,7 @@ import styles from '../../styles/About.module.scss';
 import LogoMask from './LogoMask';
 import pavel from '../../assets/pavel.jpeg';
 import hand from '../../assets/hand.gif';
+import love from '../../assets/love-code.gif';
 import WordImage from './WordImage';
 
 export default function About(): ReactElement {
@@ -17,6 +18,10 @@ export default function About(): ReactElement {
           </p>
           <p>
             With passion for all the Fron-End aspects, animations, UI effects, dynamic user experiences and&nbsp;more...
+          </p>
+          <p>
+            <WordImage image={love} word={'Love'} alt={'love coding'} /> every one project i work on, and enjoy to
+            experiment and try to build new stuff.
           </p>
         </div>
         <div className={styles.container__content__image}>

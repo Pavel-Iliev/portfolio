@@ -1,0 +1,40 @@
+.splitted__letter {
+  @for $i from 1 through 20 {
+    span:nth-child(#{$i}) {
+      display: inline-block;
+      animation: letter 1.6s linear $i/5 + s infinite;
+      -webkit-animation: letter 1.6s linear $i/5 + s infinite;
+    }
+  }
+}
+
+@keyframes letter {
+  0% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+  25% {
+    transform: translateY(-3px) scale(1.2);
+    -webkit-transform: translateY(-3px) scale(1.2);
+    -moz-transform: translateY(-3px) scale(1.2);
+    -ms-transform: translateY(-3px) scale(1.2);
+    -o-transform: translateY(-3px) scale(1.2);
+  }
+  50% {
+    transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+    -moz-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    -o-transform: scale(1.4);
+  }
+  100% {
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+  }
+}

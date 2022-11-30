@@ -45,8 +45,10 @@
   &__link {
     line-height: 1em;
 
-    &:hover {
-      color: var(--action-color);
+    @media (hover: hover) {
+      &:hover {
+        color: var(--action-color);
+      }
     }
 
     &_active {

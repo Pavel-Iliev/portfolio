@@ -1,6 +1,8 @@
 .wrap_word {
   position: relative;
   display: inline-block;
+  font-weight: 700;
+  color: var(--action-color);
 
   &__image {
     display: block;
@@ -9,9 +11,35 @@
     left: 50%;
     z-index: -1;
     opacity: 0;
-
-    :hover > & {
-      opacity: 1;
+    width: 150%;
+    transition: all 0.075s;
+    -webkit-transition: all 0.075s;
+    -moz-transition: all 0.075s;
+    -ms-transition: all 0.075s;
+    -o-transition: all 0.075s;
+    img {
+      width: 100%;
+      height: auto;
     }
+    @media (hover: hover) {
+      :hover > & {
+        opacity: 1;
+      }
+    }
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
   }
 }

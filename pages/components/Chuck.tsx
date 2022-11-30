@@ -5,6 +5,7 @@ import styles from '../../styles/Chuck.module.scss';
 import Image from 'next/image';
 import { Chuck as ChuckType } from '../../utils/types';
 import { CHUCKTEXT } from '../../utils/constants';
+import { splitToSpan } from '../../utils/helpers';
 
 export default function Chuck(props: ChuckType) {
   const { scroll } = props;
@@ -19,20 +20,13 @@ export default function Chuck(props: ChuckType) {
     setChuck(response.data.value);
   }
 
-  function chuckText(text: string) {
-    let result = [];
-    text.split('').map((letter, i) => result.push(<span key={i}>{letter}</span>));
-    result.push(<span key={result.length + 1}></span>);
-    return result;
-  }
-
   chuck && console.log(chuck);
 
   return (
     <div className={styles.wrap_chuck} onClick={() => askChuck()}>
       <Image src={chuckIcon} alt="chuck" />
       <div style={{ transform: `translate(-50%, -50%) rotate(${scroll / 10}deg)` }} className={styles.wrap_chuck__text}>
-        {chuckText(CHUCKTEXT)}
+        {splitToSpan(CHUCKTEXT)}
       </div>
     </div>
   );
