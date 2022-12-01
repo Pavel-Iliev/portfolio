@@ -1,6 +1,6 @@
-.splitted__letter {
-  @for $i from 1 through 20 {
-    span:nth-child(#{$i}) {
+@for $i from 1 through 20 {
+  .letter:nth-child(#{$i}) {
+    span {
       display: inline-block;
       animation: letter 1.6s linear $i/5 + s infinite;
       -webkit-animation: letter 1.6s linear $i/5 + s infinite;

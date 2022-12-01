@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React, { useState, MouseEvent } from 'react';
 import styles from '../../styles/WordImage.module.scss';
 import { MousePosition, WordImageType } from '../../utils/constants';
-import { splitToSpan } from '../../utils/helpers';
+import { wordSplitImage } from '../../utils/helpers';
 
 export default function WordImage(props: WordImageType) {
   const { image, alt, word } = props;
@@ -19,7 +19,7 @@ export default function WordImage(props: WordImageType) {
 
   return (
     <span onMouseMove={handleMouseMove} className={styles.wrap_word}>
-      {splitToSpan(word)}
+      {wordSplitImage(word)}
       <span
         style={{ transform: `translate(-${50 + localMousePos.x}%, -${50 + localMousePos.y / 2}%)` }}
         className={styles.wrap_word__image}
